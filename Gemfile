@@ -17,6 +17,8 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
+gem 'jquery-ui-rails', '~> 5.0.5'
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'
