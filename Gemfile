@@ -18,6 +18,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
 gem 'jquery-ui-rails', '~> 5.0.5'
+gem 'faker'
 
 
 group :development do
