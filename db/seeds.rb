@@ -7,10 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
+
+puts "Creating posts..."
 10.times do
-posts = Post.create!(
+Post.create!(
     title: Faker::Lorem.word,
     content: Faker::Lorem.paragraphs,
     rating: rand(0..5)
   )
 end
+
+puts "done"

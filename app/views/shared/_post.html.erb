@@ -1,9 +1,14 @@
 <div class="card">
   <div class="card-header">
-<!--     <%= image_tag article.image_url %>
- -->  </div>
-  <div class="card-body">
-    <h2><%= article.title %></h2>
-    <p class="article-content"><%= article.body %></p>
+      <%= image_tag "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format", class: "card__image", style: "width: 500px;"%>
+    <h2 class="card__title"><%= post.title %></h2>
+  </div>
+  <div class="card__text">
+    <p><%= post.content %></p>
+  </div>
+  <div class="share">
+    <p class="text-center">SHARE</p>
   </div>
 </div>
+
+

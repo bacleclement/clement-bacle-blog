@@ -1,3 +1,9 @@
-<% @posts.each do |a| %>
-  <%= render "post", post: a %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 col-xs-12">
+      <% @posts.each do |post| %>
+        <%= render 'shared/post', post: post %>
+      <% end %>
+    </div>
+  </div>
+</div>
