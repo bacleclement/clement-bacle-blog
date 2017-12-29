@@ -4,7 +4,7 @@
     <h1>New Post</h1>
       <%= simple_form_for(@post) do |f| %>
         <%= f.input :title, placeholder: "Title", label: false %>
-        <%= f.text_area :content, placeholder: "content", label: false  %>
+        <input  name="post[content]" id="post_content_trix_input_post" placeholder="HTML content">
         <%= f.trix_editor :content, class: "trix-content", placeholder: "text here..." %>
         <%= f.submit %>
       <% end %>

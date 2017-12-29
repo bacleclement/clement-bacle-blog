@@ -20,6 +20,7 @@ gem 'devise'
 gem 'jquery-ui-rails', '~> 5.0.5'
 gem 'faker'
 gem 'trix'
+gem 'cloudinary'
 
 
 group :development do
