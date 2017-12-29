@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+
+puts "Creating posts..."
+10.times do
+Post.create!(
+    title: Faker::Lorem.word,
+    content: Faker::Lorem.paragraphs,
+    rating: rand(0..5)
+  )
+end
+
+puts "done"

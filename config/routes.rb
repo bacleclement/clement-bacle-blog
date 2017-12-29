@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   # get 'posts/destroy'
 
+  get 'pages/about'
+
   resources :posts
 
   devise_for :users
