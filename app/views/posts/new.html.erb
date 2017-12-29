@@ -1,7 +1,15 @@
-<%= simple_form_for(@product) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+    <h1>New Post</h1>
+      <%= simple_form_for(@post) do |f| %>
+        <%= f.input :title, placeholder: "Title", label: false %>
+        <%= f.text_area :content, placeholder: "content", label: false  %>
+        <%= f.trix_editor :content, class: "trix-content", placeholder: "text here..." %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+

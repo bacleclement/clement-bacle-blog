@@ -1,10 +1,10 @@
 <div class="card">
   <div class="card-header">
-      <%= image_tag "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format", class: "card__image", style: "width: 500px;"%>
+      <%= image_tag "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format", class: "card__image" %>
     <h2 class="card__title"><%= post.title %></h2>
   </div>
   <div class="card__text">
-    <p><%= post.content %></p>
+    <p><%= sanitize post.content %></p>
   </div>
   <div class="share">
     <p class="text-center">SHARE</p>

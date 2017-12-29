@@ -8,6 +8,7 @@
 // layout file, like app/views/layouts/application.html.erb
 
 console.log('Hello World from Webpacker')
+//= require trix
 //= require_tree .
 //= require rails-ujs
 //= require jquery

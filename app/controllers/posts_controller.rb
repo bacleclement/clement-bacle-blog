@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
   before_action :find_post, only: [ :edit, :update, :show, :delete ]
+  skip_before_action :authenticate_user!, only: :index
 
   def index
     @posts = Post.all
@@ -17,7 +18,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     if @post.save
       flash[:notice] = "Successfully created post!"
-      redirect_to post_path(@post)
+      redirect_to posts_path
     else
       flash[:alert] = "Error creating new post!"
       render :new
