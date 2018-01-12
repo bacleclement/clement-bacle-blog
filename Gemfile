@@ -21,6 +21,8 @@ gem 'jquery-ui-rails', '~> 5.0.5'
 gem 'faker'
 gem 'trix'
 gem 'cloudinary'
+gem 'carrierwave', '~> 0.11.2'
+gem 'shrine'
 
 
 group :development do
