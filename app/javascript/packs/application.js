@@ -13,3 +13,6 @@ console.log('Hello World from Webpacker')
 //= require rails-ujs
 //= require jquery
 //= require bootstrap-sprockets
+
+import './trix_uploads.js';
+// import './icon.js';
