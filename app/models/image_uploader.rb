@@ -1,2 +1,2 @@
-class ImageUploader < Shrine
-end
+# class ImageUploader < Shrine
+# end
