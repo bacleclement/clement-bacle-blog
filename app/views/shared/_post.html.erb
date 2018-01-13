@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-header">
-      <%= image_tag "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format", class: "card__image" %>
+    <%= cl_image_tag post.photo, class: "card__image" %>
     <h2 class="card__title"><%= post.title %></h2>
   </div>
   <div class="card__text">

@@ -14,3 +14,28 @@
     color: white;
   }
 }
+
+#profile_photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border: 3px solid #FFF;
+  margin: 20px;
+}
+
+#info-icon:hover {
+  color: yellow;
+}
+
+#linkedin-icon:hover {
+  color: #3072AC;
+}
+
+#quora-icon:hover {
+  color: #AA382F;
+}
+
+#email-icon:hover {
+  color: grey;
+}

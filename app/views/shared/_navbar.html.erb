@@ -2,28 +2,29 @@
   <div class="row">
     <div class="col-xs-6 col-xs-offset-3">
       <div class="title text-center">
-        <p>Clément <span style="color: #4527A0;">Bacle</span></p>
+        <%= image_tag "https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAZqAAAAJDVlZGIxYTM5LTgwNGEtNDY1OC1hNjQ3LWVlMWQ3NjQ4ZjEzMg.jpg", id: "profile_photo" %>
+        <p>Clément Bacle</p>
       </div>
       <div class="social-media">
         <div class="row">
           <div class="col-xs-3 text-center icon">
             <%= link_to(pages_about_path) do %>
-              <i class="fa fa-info" aria-hidden="true"></i>
+              <i class="fa fa-info" aria-hidden="true" id="info-icon"></i>
             <% end %>
           </div>
           <div class="col-xs-3 text-center icon">
             <a href="https://www.linkedin.com/in/cl%C3%A9ment-b%C3%A2cle-22aa1a100/" target="_blank">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
+            <i class="fa fa-linkedin" aria-hidden="true" id="linkedin-icon"></i>
             </a>
           </div>
           <div class="col-xs-3 text-center icon">
             <a href="https://www.quora.com/profile/Clement-Bacle" target="_blank">
-              <i class="fa fa-quora" aria-hidden="true"></i>
+              <i class="fa fa-quora" aria-hidden="true" id="quora-icon"></i>
             </a>
           </div>
           <div class="col-xs-3 text-center icon">
             <a href="#" target="_blank">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <i class="fa fa-envelope" aria-hidden="true" id="email-icon"></i>
             </a>
           </div>
         </div>

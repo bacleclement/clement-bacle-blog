@@ -19,9 +19,9 @@ gem 'webpacker'
 gem 'devise'
 gem 'jquery-ui-rails', '~> 5.0.5'
 gem 'faker'
-gem 'trix'
 gem 'cloudinary'
-
+gem 'carrierwave', '~> 0.11.2'
+gem 'trix'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
