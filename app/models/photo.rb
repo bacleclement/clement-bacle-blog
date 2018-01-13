@@ -1,5 +1,5 @@
-class Photo < ApplicationRecord
-  include ImageUploader[:image]
-end
+# class Photo < ApplicationRecord
+#   include ImageUploader[:image]
+# end
 
 
