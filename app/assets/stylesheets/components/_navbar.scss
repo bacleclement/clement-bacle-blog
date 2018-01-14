@@ -1,41 +1,39 @@
-.title {
-  font-size: 24px;
-  color: #fff;
-  padding-top: 50px;
-  padding-bottom: 30px;
-  color: #FFF;
-}
-
 .icon {
-  color: #FFF;
   padding-bottom: 20px;
+  padding-top: 60px;
   a {
     text-decoration: none;
     color: white;
   }
 }
 
-#profile_photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 150px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  border: 3px solid #FFF;
-  margin: 20px;
+#info-icon {
+  color: #2C3E50;
+  &:hover {
+  color: #E7CA14;
+  }
 }
 
-#info-icon:hover {
-  color: yellow;
+#linkedin-icon {
+  color: #2C3E50;
+  &:hover {
+    color: #3072AC;
+  }
 }
 
-#linkedin-icon:hover {
-  color: #3072AC;
-}
 
-#quora-icon:hover {
+#quora-icon {
+  color: #2C3E50;
+  &:hover {
   color: #AA382F;
+  }
 }
 
-#email-icon:hover {
+
+
+#email-icon {
+  color: #2C3E50;
+  &:hover {
   color: grey;
+  }
 }

@@ -1,6 +1,10 @@
 <div class="card">
   <div class="card-header">
-    <%= cl_image_tag post.photo, class: "card__image" %>
+    <% if post.photo == nil %>
+      <%= cl_image_tag post.photo, class: "card__image" %>
+    <% else %>
+      <%= image_tag 'https://static.pexels.com/photos/17663/pexels-photo.jpg', class: "card__image" %>
+    <% end %>
     <h2 class="card__title"><%= post.title %></h2>
   </div>
   <div class="card__text">
