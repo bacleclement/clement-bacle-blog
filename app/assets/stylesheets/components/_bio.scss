@@ -1,0 +1,33 @@
+.text {
+  font-size: 16px;
+  font-weight: lighter;
+  flex-direction: row;
+  text-align: left;
+  margin-top: 20px;
+  color: black;
+    p {
+      margin-left: 30px;
+  }
+}
+
+.bio {
+  font-size: 24px;
+  color: #fff;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  color: #FFF;
+  display: flex;
+}
+
+#profile_photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border: 3px solid #FFF;
+  margin: 20px;
+}
+
+.photo {
+  flex-direction: row;
+}

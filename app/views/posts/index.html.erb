@@ -1,11 +1,36 @@
+<%= render 'shared/logo' %>
+<div class="log">
+  <% if current_user %>
+    <%= link_to destroy_user_session_path, :method => :delete do %>
+      <i class="fa fa-power-off" aria-hidden="true"></i>
+    <% end %>
+  <% else %>
+    <%= link_to new_user_session_path, :method => :get do %>
+      <i class="fa fa-sign-in" aria-hidden="true"></i>
+    <% end %>
+  <% end %>
+</div>
 <%= render 'shared/navbar' %>
-
 <div class="container">
   <div class="row">
     <div class="col-md-8 col-md-offset-2 col-sm-6 col-sm-offset-3 col-xs-12">
       <% @posts.each do |post| %>
         <%= render 'shared/post', post: post %>
       <% end %>
+      <div class="bio text-center">
+        <div class="photo">
+          <%= image_tag "https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAZqAAAAJDVlZGIxYTM5LTgwNGEtNDY1OC1hNjQ3LWVlMWQ3NjQ4ZjEzMg.jpg", id: "profile_photo" %>
+          <p>Dr. Clément Bacle</p>
+        </div>
+        <div class="text">
+          <p>
+            <p>Pharmacien passionné par la e-santé et l'entrepreneuriat. </p>
+            <p>Je suis convaincu que la santé doit désormais compter sur internet <br> pour mieux servir les patients. </p>
+            <p>J'ai cofondé Officina Santé pour donner vie à cet engagement.<br>
+            Nous avons construit un programme sur-mesure et intelligent <br> pour permettre à chacun de retrouver son sommeil sans médicament et durablement.</p>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
