@@ -16,7 +16,11 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2 col-sm-6 col-sm-offset-3 col-xs-12">
       <% @posts.each do |post| %>
-        <%= render 'shared/post', post: post %>
+        <% if current_user.admin == false || current_user.nil? && post.status == 'public' %>
+          <%= render 'shared/post', post: post %>
+          <% else %>
+            <%= render 'shared/post', post: post %>
+        <% end %>
       <% end %>
       <div class="bio text-center">
         <div class="photo">
