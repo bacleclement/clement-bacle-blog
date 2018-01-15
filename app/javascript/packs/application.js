@@ -11,7 +11,9 @@ console.log('Hello World from Webpacker')
 
 //= require rails-ujs
 //= require jquery
+//= require jquery_ujs
 //= require bootstrap-sprockets
+//= require bootstrap
 //= require trix
 //= require_tree .
 

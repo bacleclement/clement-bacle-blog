@@ -13,6 +13,11 @@
   <div class="share">
     <p class="text-center">SHARE</p>
   </div>
+  <% if current_user && current_user.admin == true %>
+    <%= link_to edit_post_path(post) do %>
+      <i class="fa fa-pencil" aria-hidden="true" id="pencil"></i>
+    <% end %>
+  <% end %>
 </div>
 
 
