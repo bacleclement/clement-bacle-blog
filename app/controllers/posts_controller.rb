@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  before_action :find_post, only: [ :edit, :update, :show, :delete ]
+  before_action :find_post, only: [ :edit, :update, :show, :destroy ]
   skip_before_action :authenticate_user!, only: :index
 
   def index
@@ -26,13 +26,12 @@ class PostsController < ApplicationController
   end
 
   def edit
-    # caution : manque pundit on this option
   end
 
   def update
     if @post.update_attributes(post_params)
       flash[:notice] = "Successfully updated post!"
-      redirect_to post_path(@posts)
+      redirect_to posts_path
     else
       flash[:alert] = "Error updating post!"
       render :edit
