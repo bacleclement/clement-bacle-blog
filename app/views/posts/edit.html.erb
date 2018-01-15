@@ -1,11 +1,24 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <%= simple_form_for(@post) do |f| %>
-        <%= f.input :title %>
-        <%= f.input :content %>
-        <%= f.submit %>
-      <% end %>
+<% if current_user.admin == true %>
+  <%= render 'shared/logo' %>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+      <h1>Création d'un post</h1>
+        <%= simple_form_for(@post) do |f| %>
+          <%= f.input :title, placeholder: "Title", label: false %>
+          <!-- <input name="content" id="post_content_trix_input_post" placeholder="HTML content"> -->
+          <%= f.trix_editor :content, class: "trix-content", placeholder: "text here..." %>
+          <%= f.input :photo %>
+          <%= f.input :photo_cache, as: :hidden %>
+          <%= f.submit %>
+        <% end %>
+          <%= link_to @post, method: :delete, data: {confirm: "Are you sure?"} do %>
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+          <% end %>
+      </div>
     </div>
+
   </div>
-</div>
+<% else %>
+  <%= render 'shared/logo' %>
+<% end %>

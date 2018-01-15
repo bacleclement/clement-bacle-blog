@@ -2,10 +2,28 @@
  * Your CSS code for flash notices and alerts
 * ------------------------------------- */
 
+@keyframes example {
+    0%   {opacity: 1;}
+    25%  {opacity: 0,7;}
+    50%  {opacity: 0,5;}
+    75%  {opacity: 0,3;}
+    100% {opacity: 0;}
+}
+
 .alert {
   margin: 0;
   text-align: center;
   color: white;
+  position: absolute;
+  z-index: 10;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 300px;
+  animation-name: example;
+  animation-duration: 4s;
+  opacity: 0;
+  border-radius: 8px;
 }
 .alert-info {
   background: $green;

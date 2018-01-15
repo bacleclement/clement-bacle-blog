@@ -1,16 +1,4 @@
 Rails.application.routes.draw do
-  resources :photos
-  # get 'posts/index'
-
-  # get 'posts/new'
-
-  # get 'posts/create'
-
-  # get 'posts/edit'
-
-  # get 'posts/update'
-
-  # get 'posts/destroy'
 
   get 'pages/about'
 
