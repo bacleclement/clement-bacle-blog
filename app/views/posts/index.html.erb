@@ -4,8 +4,9 @@
     <%= link_to destroy_user_session_path, :method => :delete do %>
       <i class="fa fa-power-off" aria-hidden="true"></i>
     <% end %>
+
   <% else %>
-    <%= link_to new_user_session_path, :method => :get do %>
+    <%= link_to new_user_session_path, method: :get do %>
       <i class="fa fa-sign-in" aria-hidden="true"></i>
     <% end %>
   <% end %>
