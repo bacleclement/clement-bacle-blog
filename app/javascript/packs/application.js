@@ -18,3 +18,4 @@ console.log('Hello World from Webpacker')
 //= require_tree .
 
 import './trix_uploads.js';
+import './status.js'

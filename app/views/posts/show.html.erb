@@ -1,1 +1,31 @@
-show.html.erb
+<%= render 'shared/logo' %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 col-sm-6 col-sm-offset-3 col-xs-12">
+        <div class="card">
+          <div class="card-header">
+            <% if @post.photo == nil %>
+              <%= cl_image_tag @post.photo, class: "card__image" %>
+            <% else %>
+              <%= image_tag 'https://static.pexels.com/photos/17663/pexels-photo.jpg', class: "card__image" %>
+            <% end %>
+            <h2 class="card__title"><%= @post.title %></h2>
+          </div>
+          <div class="card__text">
+            <p><%= sanitize @post.content %></p>
+          </div>
+          <% if current_user.admin == true %>
+            <%= link_to statusState_post_path(@post) do %>
+              <% if @post.status.nil? || @post.status == 'Private' %>
+                <button input="post[status]" type="button" class="btn btn-warning">Private</button>
+              <% else %>
+                <button input="post[status]" type="button" class="btn btn-success">Public</button>
+              <% end %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+

@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  before_action :find_post, only: [ :edit, :update, :show, :destroy ]
+  before_action :find_post, only: [ :edit, :update, :show, :destroy, :statusState ]
   skip_before_action :authenticate_user!, only: :index
 
   def index
@@ -18,7 +18,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     if @post.save
       flash[:notice] = "Successfully created post!"
-      redirect_to posts_path
+      redirect_to post_path(@post)
     else
       flash[:alert] = "Error creating new post!"
       render :new
@@ -47,10 +47,24 @@ class PostsController < ApplicationController
     end
   end
 
+  def statusState
+    if @post.status.nil? || @post.status == 'Public'
+      @post.status = 'Private'
+      @post.save
+      flash[:alert] = "Post privé"
+      redirect_to post_path(@post)
+    else @post.status == 'Private'
+      @post.status = 'Public'
+      @post.save
+      flash[:notice] = "Post public"
+      redirect_to post_path(@post)
+    end
+  end
+
   private
 
   def post_params
-    params.require(:post).permit(:title, :description, :content, :photo, :photo_cache)
+    params.require(:post).permit(:title, :description, :content, :photo, :photo_cache, :status)
   end
 
   def find_post
